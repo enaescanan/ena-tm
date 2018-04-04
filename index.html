@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Maternal Deaths in the Philippines by Major Cause (1991-2010) </title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500|Vollkorn:400i" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="d3.tip.js"></script>
+    <script type="text/javascript" src="jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+
+<div id="main">
+    <div id="header" class="container">
+        <div class="col60">
+            <h3>
+            One of the leading causes of <br/>maternal deaths in the Philippines are complications due to <span class="red" style="height:34px;">hypertension.</span></h3>
+            <h4>Other causes are <span class="green">postpartum hemorrhage</span> and <span class="blue">abortive outcome</span>.</h4>
+
+            </div><div class="col40">
+                <h5>
+                    On average, <strong>4-5 women die per day</strong> from pregnancy or childbirth-related complications from 1991 to 2010.
+                    <br/><br/>
+                    <small>Data from Department of Health</small>
+                </h5>
+        </div>
+        
+        <div id="tabs">
+            View: <div id="mainsvg" class="activetab">Deaths by causes</div>
+            <div id="totalsvg">Total maternal deaths</div>
+        </div>
+        
+    </div>
+    
+    <div class="container">
+        <svg id="total"></svg>
+        <svg id="visualisation"></svg>
+
+        <div class="Hypertension-fill tooltip show" style="opacity:0.9; right:-20px;top:38px;"><strong>605</strong> deaths in <strong>2010</strong></div>
+        <div class="Hypertension-fill tooltip show" style="opacity:0.9; left:-20px;bottom: 205px"><strong>290</strong> deaths in <strong>1991</strong></div>
+    </div>
+    
+    <div id="footer" class="container">
+        <div class="col80">
+          <h4><span class="red-small">Hypertension</span> is a long-term medical condition in which the blood pressure<br/> in your arteries is persistently elevated. <strong>This puts you at risk for heart disease and stroke.</strong></h4>
+            
+          A contributor to developing this condition is having certain medical conditions like diabetes but unhealthy behaviors like <span class="red-small">smoking</span>, <span class="red-small">eating food high in sodium</span>, <span class="red-small">drinking too much alcohol</span>, and <span class="red-small">being obese</span> can also increase your risk for high blood pressure.
+          <br/>
+        </div><div class="col20">
+        </div>
+    </div>
+
+</div>
+
+<script src="total.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
+<script>
+jQuery(function($) {
+   
+// R E A D Y	
+$(window).ready(function() {
+    
+    $('#mainsvg').click(function(e) {
+        $('#totalsvg').removeClass('activetab');
+        $(this).addClass('activetab');
+       $('#visualisation').show();
+       $('.Hypertension-fill.show').show();
+       $('#total').hide();
+    });  
+
+    $('#totalsvg').click(function(e) {
+        $('#mainsvg').removeClass('activetab');
+        $(this).addClass('activetab');
+       $('#total').show();
+       $('#visualisation').hide();
+       $('.Hypertension-fill.show').hide();
+    });  
+    
+});
+    
+});
+    
+    </script>
+    
+</body>
+
+</html>

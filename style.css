@@ -1,0 +1,302 @@
+body {
+    background: #073763;
+    color: #fff;
+    Font-Family: 'Raleway', Sans-Serif;
+    Font-Size: 13px;
+    letter-spacing: 0.03em;
+}
+
+h3 {
+    Font-Family: 'Vollkorn', Serif;
+    Font-Size: 38px;
+    letter-spacing: 0em;
+
+}
+
+h4 {
+    Font-Size: 16px;
+    line-height: 20px;
+}
+
+h5 {
+    font-size: 13px;
+    line-height: 18px;
+    font-style: italic;
+}
+
+h4 small {
+    font-size: 11px;
+}
+
+
+#main {
+    padding: 50px 0;
+}
+
+#header {
+    margin-bottom: 20px;
+}
+
+
+#footer {
+    margin-top: 20px;
+}
+
+.col60 {
+    width: 62%;
+    padding: 0 8% 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.col80 {
+    width: 80%;
+    padding: 0 10% 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.col40 {
+    width: 35%;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.col20 {
+    width: 20%;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#tabs {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 11px;
+
+}
+
+#tabs div {
+    display: inline-block;
+    background: #0a2b4a;
+    color: #fff;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+#tabs div:hover, .activetab {
+     background: #174c7b !important;
+}
+
+.red {
+    display: inline-block;
+    border-bottom: 2px solid #fd0001;
+}
+
+.red-small {
+    display: inline-block;
+    border-bottom: 1px solid #c10a0a;
+}
+
+.green {
+    display: inline-block;
+    border-bottom: 2px solid #58a1a5;
+}
+
+.blue {
+    display: inline-block;
+    border-bottom: 2px solid #2e749d;
+}
+
+.container {
+    width: 1030px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    max-width: none;
+}
+
+#visualisation, #total {
+    width: 995px;
+    min-height: 530px;
+}
+
+/*#visualisation, .Hypertension-fill.show*/
+#total
+{
+    display: none;
+}
+
+#total .x .tick line {
+    opacity: 0 !important;
+}
+
+
+.path {
+    fill: none;
+    stroke-width: 4;
+}
+
+.Total-circles {
+    r: 4;
+    stroke: #a50101;
+    fill: #a50101;
+}
+
+.Total-fill {
+    background: #a50101;
+}
+
+
+circle {
+    r: 4;
+    stroke-width: 0;
+    stroke-opacity: 0.5;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+circle.hover {
+    r: 7;
+    stroke-width: 20;
+    stroke-opacity: 0.5;
+}
+
+
+
+#Hypertension {
+    stroke: #fd0001;
+    stroke-width: 7;
+}
+
+.Hypertension-fill {
+    background: #fd0001;
+}
+
+.Hypertension-circles {
+    r: 7;
+    stroke: #fd0001;
+    fill: #fd0001;
+}
+
+    .Hypertension-circles:first-child,
+    .Hypertension-circles:last-child {
+/*
+        r: 7;
+        stroke-width: 30;
+        stroke-opacity: 0.5;
+        stroke: #fd0001;
+        fill: #fd0001;
+*/
+    }
+
+#Hemorrhage {
+    stroke: #58a1a5;
+}
+
+.Hemorrhage-fill {
+    background: #58a1a5;
+}
+
+.Hemorrhage-circles {
+    stroke: #58a1a5;
+    fill: #58a1a5;
+}
+
+#Abortive {
+    stroke: #2e749d;
+}
+
+.Abortive-fill {
+    background: #2e749d;
+}
+
+
+.Abortive-circles {
+    stroke: #2e749d;
+    fill: #2e749d;
+}
+
+rect {
+    fill-opacity: 0.95;
+    fill: #081e33;
+}
+
+rect:hover {
+  fill: #fd0001;
+}
+
+
+.d3-tip {
+  line-height: 1;
+  padding: 6px 12px;
+  background: #fd0001;
+  color: #fff;
+    opacity: 0.7;
+
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: #fd0001;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+.grid .tick {
+    stroke: #204b72;
+    opacity: 1;
+
+}
+.grid path {
+    stroke-width: 0;
+}
+
+.axis path {
+    fill: none;
+    stroke: #777;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: Roboto;
+    font-size: 13px;
+    fill: #849db1;
+    stroke-width: 0;
+}
+
+.tooltip {
+    color: #fff;
+    padding: 5px 8px;
+    text-align: center;
+    max-width: 150px;
+    line-height: 15px;
+}
+
+.legend {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.y.axis .tick:first-child {
+    stroke: red;
+}
